@@ -46,11 +46,11 @@ function InvoiceController($scope) {
 
   $scope.removeLogo = function(element) {
     var elem = angular.element("#remove_logo");
-    if(elem.text() == "Toon Logo"){
-      elem.text("Verwijder Logo");
+    if(elem.text() == "Toon logo"){
+      elem.text("Verwijder logo");
       $scope.logoRemoved = false;
     } else {
-      elem.text("Toon Logo");
+      elem.text("Toon logo");
       $scope.logoRemoved = true;
     }
     localStorage["logo"] = "";
