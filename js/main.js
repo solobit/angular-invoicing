@@ -4,8 +4,8 @@ function InvoiceController($scope) {
   $scope.printMode = false;
 
   var sample_invoice = {
-    tax: 13.00,
-    invoice_number: 10,
+    tax: 21.00,
+    invoice_number: 1,
     customer_info: {
       name: "Mr. John Doe",
       web_link: "John Doe Designs Inc.",
@@ -25,7 +25,7 @@ function InvoiceController($scope) {
     ]
   };
 
-  var default_logo = "images/metaware_logo.png";
+  var default_logo = "https://avatars2.githubusercontent.com/u/2054667?s=140";
 
   if(localStorage["invoice"] == "" || localStorage["invoice"] == null){
     $scope.invoice = sample_invoice;
