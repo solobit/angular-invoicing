@@ -76,7 +76,7 @@
 
       </tr>
       <tr ng:repeat="item in invoice.items" style="display: none" jq:animate="dropdown;250">
-          <td><a href ng-hide="printMode" ng-click="removeItem(item)" class="sb-knop btn btn-danger">[X]</a></td>
+          <td><a href ng-hide="printMode" ng-click="removeItem(item)" class="btn btn-danger">[X]</a></td>
           <td><input ng:model="item.description" placeholder="Omschrijving"></td>
           <td><input ng:model="item.qty" value="1" size="4" ng:required ng:validate="integer" placeholder="qty"></td>
           <td><input ng:model="item.cost" value="0.00" ng:required ng:validate="number" size="6" placeholder="cost"></td>
@@ -84,11 +84,11 @@
 
       </tr>
       <tr ng-hide="printMode">
-          <td colspan="5"><a class="btn btn-primary" href ng:click="addItem()" >Add Item</a></td>
+          <td colspan="5"><a class="btn btn-primary" href ng:click="addItem()" >Regel Toevoegen</a></td>
       </tr>
       <tr>
           <td colspan="4" align="right">
-            Sub Total
+            Subtotaal
           </td>
           <td align="right">
             {{invoice_sub_total() | currency: "&euro;"}}
@@ -96,7 +96,7 @@
       </tr>
       <tr>
           <td colspan="4" align="right">
-            Tax(%): <input ng:model="invoice.tax" ng:validate="number" style="width:43px">
+            BTW (21%): <input ng:model="invoice.tax" ng:validate="number" style="width:43px">
           </td>
           <td align="right">
             {{calculate_tax() | currency: "&euro;"}}
@@ -104,7 +104,7 @@
       </tr>
       <tr>
           <td colspan="4" align="right">
-            Grand Total:
+            Totaal:
           </td>
           <td align="right">
             {{calculate_grand_total() | currency: "&euro;"}}
@@ -122,8 +122,8 @@
 <div ng-hide="printMode" class="copy noPrint">
   <a href="http://jasdeep.ca/?utm_source=angular_invoicing">Jasdeep Singh</a> &
   <a href="http://github.com/manpreetrules">Manpreet Singh</a>
-  Made with
-  <span class="love">&#9829;</span> in Toronto by
+  Gemaakt met
+  <span class="love">&#9829;</span> in Toronto door
   <a href="http://metawarelabs.com/?utm_source=angular_invoicing">Metaware Labs Inc.</a>
 </div>
 </body>
