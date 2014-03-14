@@ -32,6 +32,10 @@ body{
   text-transform: uppercase;
 }
 
+.sb-knop {
+  background-color: #fa2e37;
+}
+
 .infos input{
   width: 300px;
 }
