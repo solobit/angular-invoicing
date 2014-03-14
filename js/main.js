@@ -14,14 +14,14 @@ function InvoiceController($scope) {
       postal: "90210"
     },
     company_info: {
-      name: "Metaware Labs",
-      web_link: "www.metawarelabs.com",
-      address1: "123 Yonge Street",
-      address2: "Toronto, ON, Canada",
-      postal: "M5S 1B6"
+      name: "Solobit",
+      web_link: "http://solobit.net",
+      address1: "Groeseindstraat 29-09",
+      address2: "5014 LT Tilburg",
+      postal: ""
     },
     items:[
-      { qty: 10, description: "Gadget", cost: 9.95 }
+      { qty: 1, description: "Consult", cost: 60 }
     ]
   };
 
@@ -46,11 +46,11 @@ function InvoiceController($scope) {
 
   $scope.removeLogo = function(element) {
     var elem = angular.element("#remove_logo");
-    if(elem.text() == "Show Logo"){
-      elem.text("Remove Logo");
+    if(elem.text() == "Toon Logo"){
+      elem.text("Verwijder Logo");
       $scope.logoRemoved = false;
     } else {
-      elem.text("Show Logo");
+      elem.text("Toon Logo");
       $scope.logoRemoved = true;
     }
     localStorage["logo"] = "";
@@ -90,7 +90,7 @@ function InvoiceController($scope) {
   };
 
   $scope.clearLocalStorage = function() {
-    var confirmClear = confirm("Are you sure you would like to clear the invoice?");
+    var confirmClear = confirm("Weet je zeker dat je de invoice wilt wissen?");
     if(confirmClear){
       localStorage["invoice"] = "";
       localStorage["logo"] = "";
