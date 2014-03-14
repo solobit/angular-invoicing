@@ -96,7 +96,7 @@
       </tr>
       <tr>
           <td colspan="4" align="right">
-            BTW (21%): <input ng:model="invoice.tax" ng:validate="number" style="width:43px">
+            BTW %: <input ng:model="invoice.tax" ng:validate="number" style="width:43px">
           </td>
           <td align="right">
             {{calculate_tax() | currency: "&euro;"}}
