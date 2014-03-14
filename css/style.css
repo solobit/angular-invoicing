@@ -26,6 +26,12 @@ body{
   padding:20px;
 }
 
+.rekening-kop {
+  background-color: #0b2e65;
+  color: #fff;
+  text-transform: uppercase;
+}
+
 .infos input{
   width: 300px;
 }
