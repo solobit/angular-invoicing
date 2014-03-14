@@ -5,7 +5,7 @@ function InvoiceController($scope) {
 
   var sample_invoice = {
     tax: 21.00,
-    invoice_number: 2014-001,
+    invoice_number: "2014-001",
     customer_info: {
       name: "Bedrijfsnaam",
       web_link: "referentie/kenmerk",
