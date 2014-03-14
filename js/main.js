@@ -7,11 +7,11 @@ function InvoiceController($scope) {
     tax: 21.00,
     invoice_number: 1,
     customer_info: {
-      name: "Mr. John Doe",
-      web_link: "John Doe Designs Inc.",
-      address1: "1 Infinite Loop",
-      address2: "Cupertino, California, US",
-      postal: "90210"
+      name: "Bedrijfsnaam",
+      web_link: "referentie/kenmerk",
+      address1: "Hoofdstraat 1",
+      address2: "Tilburg",
+      postal: "5014 LT"
     },
     company_info: {
       name: "Solobit",
