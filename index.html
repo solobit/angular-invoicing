@@ -24,7 +24,7 @@
     </tr>
     <tr>
       <td>
-        <h4>Ons Kenmerk #<input type="text" id="invoice_number" ng-model="invoice.invoice_number" /></h4>
+        <h4>Ons kenmerk: <input type="text" id="invoice_number" ng-model="invoice.invoice_number" /></h4>
       </td>
       <td align="right">
         <input type="file" id="imgInp" />
@@ -113,7 +113,7 @@
   <div class="noPrint">
     <a href="#" class="btn btn-primary" ng-show="printMode" ng-click="printInfo()">Afdrukken</a>
     <a href="#" class="btn btn-primary" ng-click="clearLocalStorage()">&#x26D4; Wissen</a>
-    <a href="#" class="btn btn-primary" ng-hide="printMode" ng-click="printMode = true;">Aanzetten afdrukmodus</a>
+    <a href="#" class="btn btn-primary" ng-hide="printMode" ng-click="printMode = true;">🔍 Aanzetten afdrukmodus</a>
     <a href="#" class="btn btn-primary" ng-show="printMode" ng-click="printMode = false;">Uitzetten afdrukmodus</a>
   </div>
 </div>
