@@ -1,3 +1,16 @@
+function formattedDate(date) {
+    var d = new Date(date || Date.now()),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [day, month, year].join('/');
+}
+
+
 function InvoiceController($scope) {
 
   $scope.logoRemoved = false;
@@ -6,6 +19,7 @@ function InvoiceController($scope) {
   var sample_invoice = {
     tax: 21.00,
     invoice_number: "2014-001",
+    invoice_date: formattedDate(),
     customer_info: {
       name: "Bedrijfsnaam",
       web_link: "referentie/kenmerk",
@@ -19,8 +33,8 @@ function InvoiceController($scope) {
       address1: "Groeseindstraat 29-09",
       address2: "5014 LT Tilburg",
       postal: "The Netherlands",
-      coc: "57191557",
-      irs: "NL140168102B01"
+      coc: "KvK: 57191557",
+      irs: "BTW: NL140168102B01"
     },
     items:[
       { qty: 1, description: "Consult", cost: 60 }
