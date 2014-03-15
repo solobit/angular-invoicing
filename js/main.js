@@ -1,5 +1,4 @@
 
-
 function InvoiceController($scope) {
 
   $scope.logoRemoved = false;
@@ -8,7 +7,7 @@ function InvoiceController($scope) {
   var sample_invoice = {
     tax: 21.00,
     invoice_number: "2014-001",
-    invoice_date: "",
+    invoice_date: "01-01-2014",
     customer_info: {
       name: "Bedrijfsnaam",
       web_link: "referentie/kenmerk",
@@ -22,8 +21,8 @@ function InvoiceController($scope) {
       address1: "Groeseindstraat 29-09",
       address2: "5014 LT Tilburg",
       postal: "The Netherlands",
-      coc: "KvK: 57191557",
-      irs: "BTW: NL140168102B01"
+      coc: "57191557",
+      irs: "NL140168102B01"
     },
     items:[
       { qty: 1, description: "Consult", cost: 60 }
@@ -128,7 +127,7 @@ function readURL(input) {
 
 $(document).ready(function() {
   
-  $("#invoice_data").val(Date.now());
+  $("#invoice_date").val(Date.now());
   $("#invoice_number").focus();
   $("#imgInp").change(function() {
     readURL(this);
