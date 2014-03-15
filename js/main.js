@@ -18,7 +18,9 @@ function InvoiceController($scope) {
       web_link: "http://solobit.net",
       address1: "Groeseindstraat 29-09",
       address2: "5014 LT Tilburg",
-      postal: ""
+      postal: "The Netherlands",
+      coc: "57191557",
+      irs: "NL140168102B01"
     },
     items:[
       { qty: 1, description: "Consult", cost: 60 }
