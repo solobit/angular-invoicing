@@ -21,17 +21,19 @@ function InvoiceController($scope) {
     invoice_date: "01-01-2014",
     customer_info: {
       name: "Bedrijfsnaam",
-      web_link: "referentie/kenmerk",
+      reference: "referentie/kenmerk",
       address1: "Hoofdstraat 1",
       address2: "Tilburg",
-      postal: "5014 LT"
+      postal: "5014 LT",
+      web_link: ""
     },
     company_info: {
       name: "Solobit",
-      web_link: "http://solobit.net",
       address1: "Groeseindstraat 29-09",
       address2: "5014 LT Tilburg",
       postal: "The Netherlands",
+      web_link: "http://solobit.net",
+      phone: "013 - 590 66 77",
       coc: "57191557",
       irs: "NL140168102B01"
     },
