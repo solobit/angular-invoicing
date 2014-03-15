@@ -25,7 +25,7 @@
     <tr>
       <td>
         <h4>Ons kenmerk: <input type="text" id="invoice_number" ng-model="invoice.invoice_number" /></h4>
-        <p>Datum aanmaak: <input type="text" id="invoice_date" ng-model="invoice.invoice_date" /></p>
+        <p>Faktuurdatum: <input type="text" id="invoice_date" ng-model="invoice.invoice_date" /></p>
       </td>
       <td align="right">
         <input type="file" id="imgInp" />
@@ -44,10 +44,11 @@
       <td>
         <div class="infos">
           <div><strong><input type="text" ng-model="invoice.customer_info.name"/></strong></div>
-          <div><input type="text" ng-model="invoice.customer_info.web_link"/></div>
+          <div><input type="text" ng-model="invoice.customer_info.reference"/></div>
           <div><input type="text" ng-model="invoice.customer_info.address1"/></div>
           <div><input type="text" ng-model="invoice.customer_info.address2"/></div>
           <div><input type="text" ng-model="invoice.customer_info.postal"/></div>
+          <div><input type="text" ng-model="invoice.customer_info.web_link"/></div>
         </div>
       </td>
       <td align="right">
