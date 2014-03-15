@@ -29,7 +29,8 @@ body{
 .rekening-kop {
   background-color: #0b2e65;
   color: #fff;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
+  font-family: 'Ubuntu Mono', sans-serif;
 }
 
 .sb-knop {
