@@ -25,6 +25,7 @@
     <tr>
       <td>
         <h4>Ons kenmerk: <input type="text" id="invoice_number" ng-model="invoice.invoice_number" /></h4>
+        <p>Datum aanmaak: <input type="text" id="invoice_date" ng-model="invoice.invoice_date" /></p>
       </td>
       <td align="right">
         <input type="file" id="imgInp" />
@@ -56,8 +57,8 @@
           <div><input type="text" ng-model="invoice.company_info.address1"/></div>
           <div><input type="text" ng-model="invoice.company_info.address2"/></div>
           <div><input type="text" ng-model="invoice.company_info.postal"/></div>
-          <div>KVK nr. <input type="text" ng-model="invoice.company_info.coc"/></div>
-          <div>BTW nr. <input type="text" ng-model="invoice.company_info.irs"/></div>
+          <div><input type="text" ng-model="invoice.company_info.coc"/></div>
+          <div><input type="text" ng-model="invoice.company_info.irs"/></div>
           
         </div>
       </td>
@@ -111,7 +112,7 @@
   
   
   <div class="noPrint">
-    <a href="#" class="btn btn-primary" ng-show="printMode" ng-click="printInfo()">⎙ Afdrukken</a>
+    <a href="#" class="btn btn-primary" ng-show="printMode" ng-click="printInfo()">Afdrukken</a>
     <a href="#" class="btn btn-primary" ng-click="clearLocalStorage()">&#x26D4; Wissen</a>
     <a href="#" class="btn btn-primary" ng-hide="printMode" ng-click="printMode = true;">🔍 Afdrukweergave</a>
     <a href="#" class="btn btn-primary" ng-show="printMode" ng-click="printMode = false;">⥒ Terug naar schermweergave</a>
