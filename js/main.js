@@ -1,4 +1,3 @@
-
 function formattedDate(date) {
   var d = new Date(date || Date.now()),
       month = '' + (d.getMonth() + 1),
@@ -138,6 +137,7 @@ function readURL(input) {
 // };
 
 $(document).ready(function() {
+  $("#invoice_data").val(formattedDate());
   $("#invoice_number").focus();
   $("#imgInp").change(function() {
     readURL(this);
