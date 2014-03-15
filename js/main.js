@@ -1,19 +1,17 @@
 
+function formattedDate(date) {
+  var d = new Date(date || Date.now()),
+      month = '' + (d.getMonth() + 1),
+      day = '' + d.getDate(),
+      year = d.getFullYear();
+
+  if (month.length < 2) month = '0' + month;
+  if (day.length < 2) day = '0' + day;
+
+  return [day, month, year].join('/');
+}
 
 function InvoiceController($scope) {
-
-  function formattedDate(date) {
-    var d = new Date(date || Date.now()),
-        month = '' + (d.getMonth() + 1),
-        day = '' + d.getDate(),
-        year = d.getFullYear();
-
-    if (month.length < 2) month = '0' + month;
-    if (day.length < 2) day = '0' + day;
-
-    return [day, month, year].join('/');
-  }
-
 
   $scope.logoRemoved = false;
   $scope.printMode = false;
@@ -21,7 +19,7 @@ function InvoiceController($scope) {
   var sample_invoice = {
     tax: 21.00,
     invoice_number: "2014-001",
-    invoice_date: formattedDate(),
+    invoice_date: "",
     customer_info: {
       name: "Bedrijfsnaam",
       web_link: "referentie/kenmerk",
@@ -59,7 +57,7 @@ function InvoiceController($scope) {
   }
 
   $scope.addItem = function() {
-    $scope.invoice.items.push({ qty:0, cost:0, description:"" });
+    $scope.invoice.items.push({ qty:1, cost:70, description:"Consult" });
   };
 
   $scope.removeLogo = function(element) {
@@ -108,7 +106,7 @@ function InvoiceController($scope) {
   };
 
   $scope.clearLocalStorage = function() {
-    var confirmClear = confirm("Weet je zeker dat je de invoice wilt wissen?");
+    var confirmClear = confirm("Weet je zeker dat je de faktuur wilt wissen?");
     if(confirmClear){
       localStorage["invoice"] = "";
       localStorage["logo"] = "";
