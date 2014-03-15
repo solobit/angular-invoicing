@@ -1,4 +1,8 @@
-function formattedDate(date) {
+
+
+function InvoiceController($scope) {
+
+  function formattedDate(date) {
     var d = new Date(date || Date.now()),
         month = '' + (d.getMonth() + 1),
         day = '' + d.getDate(),
@@ -8,10 +12,8 @@ function formattedDate(date) {
     if (day.length < 2) day = '0' + day;
 
     return [day, month, year].join('/');
-}
+  }
 
-
-function InvoiceController($scope) {
 
   $scope.logoRemoved = false;
   $scope.printMode = false;
