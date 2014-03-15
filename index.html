@@ -57,9 +57,6 @@
           <div><input type="text" ng-model="invoice.company_info.address1"/></div>
           <div><input type="text" ng-model="invoice.company_info.address2"/></div>
           <div><input type="text" ng-model="invoice.company_info.postal"/></div>
-          <div><input type="text" ng-model="invoice.company_info.coc"/></div>
-          <div><input type="text" ng-model="invoice.company_info.irs"/></div>
-          
         </div>
       </td>
     </tr>
@@ -76,8 +73,8 @@
       <tr ng:repeat="item in invoice.items" style="display: none" jq:animate="dropdown;250">
           <td><a href ng-hide="printMode" ng-click="removeItem(item)" class="btn btn-danger">&#x2718;</a></td>
           <td><input ng:model="item.description" placeholder="Omschrijving"></td>
-          <td><input ng:model="item.qty" style="text-align:center;" value="1" size="4" ng:required ng:validate="integer" placeholder="aantal"></td>
-          <td><input ng:model="item.cost" style="text-align:center;" value="70" ng:required ng:validate="number" size="6" placeholder="kosten"></td>
+          <td><input ng:model="item.qty" style="text-align:center;" value="0" size="4" ng:required ng:validate="integer" placeholder="aantal"></td>
+          <td><input ng:model="item.cost" style="text-align:center;" value="0" ng:required ng:validate="number" size="6" placeholder="kosten"></td>
           <td align="right">{{item.cost * item.qty | currency: "&euro;"}}</td>
 
       </tr>
@@ -122,7 +119,7 @@
 <div class="copy">
   Gelieve deze rekening binnen 21 dagen van dagtekening te voldoen op bankrekening NL03 RABO 0152 0388 68 t.n.v. R. Jentzema, Tilburg.
   <br />
-  Solobit staat geregistreerd bij de Kamer van Koophandel te Tilburg onder KvK nummer 57191557. Het BTW nummer is NL140168102B01.
+  BTW nummer: NL140168102B01. Solobit staat geregistreerd bij de Kamer van Koophandel te Tilburg onder KvK nummer 57191557.
 </div>
 
 <div ng-hide="printMode" class="copy noPrint">
