@@ -76,8 +76,8 @@
       <tr ng:repeat="item in invoice.items" style="display: none" jq:animate="dropdown;250">
           <td><a href ng-hide="printMode" ng-click="removeItem(item)" class="btn btn-danger">&#x2718;</a></td>
           <td><input ng:model="item.description" placeholder="Omschrijving"></td>
-          <td><input ng:model="item.qty" value="1" size="4" ng:required ng:validate="integer" placeholder="aantal"></td>
-          <td><input ng:model="item.cost" value="0.00" ng:required ng:validate="number" size="6" placeholder="kosten"></td>
+          <td><input ng:model="item.qty" style="text-align:center;" value="1" size="4" ng:required ng:validate="integer" placeholder="aantal"></td>
+          <td><input ng:model="item.cost" style="text-align:center;" value="70" ng:required ng:validate="number" size="6" placeholder="kosten"></td>
           <td align="right">{{item.cost * item.qty | currency: "&euro;"}}</td>
 
       </tr>
@@ -94,7 +94,7 @@
       </tr>
       <tr>
           <td colspan="4" align="right">
-            BTW %: <input ng:model="invoice.tax" ng:validate="number" style="width:43px">
+            BTW %: <input ng:model="invoice.tax" ng:validate="number" style="width:43px;text-align:right;">
           </td>
           <td align="right">
             {{calculate_tax() | currency: "&euro;"}}
