@@ -56,6 +56,9 @@
           <div><input type="text" ng-model="invoice.company_info.address1"/></div>
           <div><input type="text" ng-model="invoice.company_info.address2"/></div>
           <div><input type="text" ng-model="invoice.company_info.postal"/></div>
+          <div>KVK nr. <input type="text" ng-model="invoice.company_info.coc"/></div>
+          <div>BTW nr. <input type="text" ng-model="invoice.company_info.irs"/></div>
+          
         </div>
       </td>
     </tr>
@@ -104,25 +107,9 @@
             {{calculate_grand_total() | currency: "&euro;"}}
           </td>
       </tr>
-      <tr></tr>
-      <tr>
-        <td align="center">
-          KVK Nummer
-        </td>
-        <td align="center">
-          <input type="text" ng-model="invoice.company_info.coc"/>
-        </td>
-        <td></td>
-        <td align="center">
-          BTW Nummer
-        </td>
-        <td align="center">
-          <input type="text" ng-model="invoice.company_info.irs"/>
-        </td>
-
-        
-      </tr>
   </table>
+  
+  
   <div class="noPrint">
     <a href="#" class="btn btn-primary" ng-show="printMode" ng-click="printInfo()">Afdrukken</a>
     <a href="#" class="btn btn-primary" ng-click="clearLocalStorage()">&#x26D4; Wissen</a>
